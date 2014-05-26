@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding='UTF-8'?>
+<routes>	
+	<!-- Пример команды
+	   <route url="SomeUrl"> SomeUrl - УРЛ который принимает браузер (без параметров GET)
+		<command>DefaultCommand</command> Команда - обработчик из /application/command		
+		<view>index</view> tpl - файл который отображает "середину"
+		<onlyMainView>1</onlyMainView> - указываем если не нужно подгружать хидер и футер шаблона
+		<css>signin</css> - указываем css файл если он не дефолтный
+
+		<smarty>1</smarty> - указываем если не нужно подключать смарти
+		<db>1</db> - указываем если не нужно подключать базу данных
+		<session>1</session> - указываем если не нужно подключать сессии
+	   </route> 	
+	-->
+
+	<!-- Страница логина/индекс -->
+	<route url="default">
+		<command>DefaultCommand</command>		
+		<view>loginPage</view>
+		<onlyMainView>1</onlyMainView>
+		<css>signin</css>
+	</route>
+	<!--Обработка формы авторизации-->	
+	<route url="auth">
+		<command>LoginProcess</command>		
+		<smarty>1</smarty>
+	</route>
+	<!-- Команда на выход из системы-->
+	<route url="logOut">
+		<command>LogOut</command>		
+		<smarty>1</smarty>
+		<db>1</db>
+	</route>
+	<!--Личный кабинет-->
+	<route url="cabinet">
+		<command>ShowCabinet</command>
+		<view>cabinet</view>		
+	</route>
+
+	<!--Форма добавления/редактирования данных абитуриента-->
+	<route url="addAbiturientForm">
+		<command>AddAbiturientForm</command>
+		<view>addAbiturientForm</view>		
+	</route>
+	<!--Команда добавления/редактирования абитуриента-->
+	<route url="addAbiturient">
+		<command>AddAbiturient</command>
+		<smarty>1</smarty>		
+	</route>
+	<!--Форма добавления события-->
+	<route url="addCuratorEventForm">
+		<command>AddCuratorEventForm</command>
+		<view>addCuratorEventForm</view>		
+	</route>
+	<!--Команда добавления события-->
+	<route url="addCuratorEvent">
+		<command>AddCuratorEvent</command>
+		<smarty>1</smarty>		
+	</route>
+	<!--Показать все события для абитуриента-->
+	<route url="showCuratorEvents">
+		<command>ShowCuratorEvents</command>
+		<view>showCuratorEvents</view>		
+	</route>
+</routes>	

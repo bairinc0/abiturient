@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<config>
+	<db>
+		<dbname>localhost</dbname>		
+		<host>localhost</host>
+		<user>root</user>
+		<pass></pass>
+	</db>	
+	<authinfo>
+		<sitename>
+			abiturientIMI
+		</sitename>	
+	</authinfo>
+</config>
